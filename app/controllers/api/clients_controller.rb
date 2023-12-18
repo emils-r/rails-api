@@ -1,9 +1,11 @@
 module Api
   class ClientsController < ApplicationController
+    # GET /api/clients
     def index
       render json: Client.all
     end
 
+    # POST /api/clients
     def create
       client = Client.new(client_params)
 
@@ -14,6 +16,7 @@ module Api
       end
     end
 
+    # DELETE /api/clients/1
     def destroy
       Client.find(params[:id]).destroy!
 
