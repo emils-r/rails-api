@@ -6,10 +6,9 @@ module Api
       # TODO:
       # - check if wallets exist
       # - check wallets currencies
-      # - get currency rate if needed
-      # - calculate transferable amount
-      # - update wallets
-      # - update transfer is_done = true
+      # - create background job
+
+      TransferFundsJob.perform_later transfer
 
       if transfer.save
         render json: transfer, status: :created
