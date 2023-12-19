@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :clients
     resources :wallets, only: [ :index, :show, :create, :destroy ]
+
+    post '/transfer' => 'transfer#transfer_funds'
   end
 end

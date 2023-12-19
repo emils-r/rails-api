@@ -4,7 +4,7 @@ class CreateWallets < ActiveRecord::Migration[7.0]
       t.references :client, null: false, foreign_key: true
       t.string :currency, null: false
       t.decimal :balance, :default => 0.00
-      t.boolean :is_active, :default => 1
+      t.boolean :is_active, :default => true
 
       t.timestamps
     end
