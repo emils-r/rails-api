@@ -12,7 +12,7 @@ class WalletsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create wallet" do
     assert_difference("Wallet.count") do
-      post wallets_url, params: { wallet: { balance: @wallet.balance, client_id: @wallet.client_id, currency: @wallet.currency, is_deleted: @wallet.is_deleted } }, as: :json
+      post wallets_url, params: { wallet: { balance: @wallet.balance, client_id: @wallet.client_id, currency: @wallet.currency, is_active: @wallet.is_active } }, as: :json
     end
 
     assert_response :created
@@ -24,7 +24,7 @@ class WalletsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update wallet" do
-    patch wallet_url(@wallet), params: { wallet: { balance: @wallet.balance, client_id: @wallet.client_id, currency: @wallet.currency, is_deleted: @wallet.is_deleted } }, as: :json
+    patch wallet_url(@wallet), params: { wallet: { balance: @wallet.balance, client_id: @wallet.client_id, currency: @wallet.currency, is_active: @wallet.is_active } }, as: :json
     assert_response :success
   end
 

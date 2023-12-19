@@ -4,10 +4,10 @@ one:
   client: one
   currency: MyString
   balance: 9.99
-  is_deleted: false
+  is_active: true
 
 two:
   client: two
   currency: MyString
   balance: 9.99
-  is_deleted: false
+  is_active: false

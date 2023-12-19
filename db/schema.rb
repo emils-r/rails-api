@@ -24,7 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_18_150542) do
     t.bigint "client_id", null: false
     t.string "currency", null: false
     t.decimal "balance", default: "0.0"
-    t.boolean "is_deleted", default: false
+    t.boolean "is_active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_wallets_on_client_id"
