@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :wallets, only: [ :index, :show, :create, :destroy ]
 
     post '/transfer' => 'transfer#transfer_funds'
+    post '/transfer/exchange-rate' => 'transfer#exchange_rate'
   end
 end

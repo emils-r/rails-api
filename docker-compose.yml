@@ -1,6 +1,11 @@
 version: '3.8'
 
 services:
+  redis:
+    image: redis:7.2
+    ports:
+      - "6379:6379"
+
   db:
     image: postgres:16.1
     container_name: db-container
@@ -25,3 +30,4 @@ services:
       - .:/app
     depends_on:
       - db
+      - redis

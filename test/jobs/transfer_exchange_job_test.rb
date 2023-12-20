@@ -1,6 +1,6 @@
 require "test_helper"
 
-class TransferFundsJobTest < ActiveJob::TestCase
+class TransferExchangeJobTest < ActiveJob::TestCase
   # test "the truth" do
   #   assert true
   # end

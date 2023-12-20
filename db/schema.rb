@@ -24,7 +24,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_19_121345) do
     t.integer "wallet_from", null: false
     t.integer "wallet_to", null: false
     t.decimal "amount", null: false
-    t.string "currency", null: false
+    t.string "currency_from"
+    t.string "currency_to"
     t.decimal "exchange_rate"
     t.boolean "is_done", default: false
     t.datetime "created_at", null: false

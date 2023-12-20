@@ -7,4 +7,8 @@ class Wallet < ApplicationRecord
 
   default_scope { order(:id) }
   # default_scope { where(is_active: true) }
+
+  def valid_balance(amount)
+    balance >= amount
+  end
 end

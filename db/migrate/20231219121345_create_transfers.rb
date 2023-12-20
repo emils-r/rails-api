@@ -4,7 +4,8 @@ class CreateTransfers < ActiveRecord::Migration[7.0]
       t.integer :wallet_from, null: false
       t.integer :wallet_to, null: false
       t.decimal :amount, null: false
-      t.string :currency, null: false
+      t.string :currency_from
+      t.string :currency_to
       t.decimal :exchange_rate
       t.boolean :is_done, :default => false
 
